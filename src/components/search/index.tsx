@@ -5,21 +5,21 @@ import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import { Box, Container } from "@mui/material";
 
-export interface SearchPageProps { };
+export interface SearchPageProps { setSearch:any };
 
-const Search: React.FunctionComponent<SearchPageProps> = props => {
+const Search: React.FunctionComponent<SearchPageProps> = ({setSearch}) => {
     return (
         <Container sx={{display: "flex", mt: 5, justifyContent:"center" }}>
             <Box sx={{ width: "90%" }}>
                 <Paper
                 component="form"
                 sx={{  display: 'flex', alignItems: 'center', width: "100%"}}>
-                    <InputBase
+                    <InputBase onChange={(event) => setSearch(event.target.value)}
                         sx={{ ml: 1, flex: 1 }}
 
                     />
-                    <IconButton type="button" sx={{ p: '10px' }} aria-label="search">
-                        <SearchIcon />
+                    <IconButton sx={{ p: '10px' }} aria-label="search">
+                        <SearchIcon/>
                     </IconButton>
                 </Paper>
             </Box>
