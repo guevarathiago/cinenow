@@ -69,7 +69,7 @@ return (
        <Container maxWidth="lg">
        <Typography variant='body1' sx={{color:"white"}}>{movie?.overview}</Typography>
        <Box sx={{display:"flex", justifyContent:"center"}}> 
-        <Chip sx={{ml:-3, mt:10, mb:3, background: "#cccccc", width:'20%'}} icon={<StarIcon />} label={movie?.vote_average} variant="outlined" />
+        <Chip sx={{ml:-3, mt:10, mb:3, background: "#cccccc", width:'10%'}} icon={<StarIcon />} label={movie?.vote_average} variant="outlined" />
       </Box>
        
        </Container>

@@ -27,14 +27,11 @@ export default function Navbar() {
           </IconButton>
         </Link>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1, mt:0 }}>
-          C i n e n o w
+          Cinenow
         </Typography>
         <Stack direction="row" spacing={2} sx={{mr:1}}>
-          <Link style={{ fontSize:"20px", textDecoration: 'none', color:"white"}} to="./">
+          <Link style={{ marginRight:"20px", fontSize:"20px", textDecoration: 'none', color:"white"}} to="./">
             <Button color="inherit">Home</Button>
-          </Link>
-          <Link style={{ fontSize:"20px", textDecoration: 'none', color:"white"}} to="/favorites">
-            <Button color="inherit">Favorites</Button>
           </Link>
         </Stack>
       </Toolbar>

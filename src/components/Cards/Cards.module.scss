@@ -1,0 +1,14 @@
+.card{
+    margin: 2;
+     
+      min-height: 280px;
+       display: flex;
+        flex-direction: column;
+         align-items: center;
+    justify-content: center;
+    
+     &:hover{
+         transform: scale(1.05); 
+      transition: transform 0.2s ease;
+     }
+}

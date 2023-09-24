@@ -12,7 +12,6 @@ const Search: React.FunctionComponent<SearchPageProps> = ({setSearch}) => {
         <Container sx={{display: "flex", mt: 5, justifyContent:"center" }}>
             <Box sx={{ width: "90%" }}>
                 <Paper
-                component="form"
                 sx={{  display: 'flex', alignItems: 'center', width: "100%"}}>
                     <InputBase placeholder="Search for movies" onChange={(event) => setSearch(event.target.value)}
                         sx={{ ml: 1, flex: 1 }}

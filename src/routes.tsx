@@ -1,5 +1,4 @@
 import React from 'react';
-import Favorites from 'pages/Favorites';
 import Home from 'pages/Home';
 import InfoPage from 'pages/InfoPage';
 import ModelPage from 'pages/ModelPage';
@@ -15,7 +14,6 @@ const AppRouter: React.FunctionComponent<AppRouterProps> = (props) => {
         <Route path="/" element={<ModelPage />}>
           <Route path="*" element={<div>error 404</div>} />
           <Route index element={<Home />} />
-          <Route path="favorites" element={<Favorites />} />
           <Route path=":id" element={<InfoPage />} />
         </Route>
       </Routes>

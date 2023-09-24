@@ -2,35 +2,27 @@ import { Avatar, Card, CardActions, CardContent, Chip, Typography } from '@mui/m
 import React from 'react';
 import { Link } from 'react-router-dom';
 import StarIcon from '@mui/icons-material/Star';
+import style from './Cards.module.scss';
+import { IMovie } from 'types';
 
+export interface CardsProps {  minWidthCustom: string  ; key: number; movie: IMovie} ;
 
-export interface CardsProps { key: number; movie:{
-  title: string,
-  poster_path: string,
-  id: number,
-  vote_average: number,
-  release_date: string
-}} ;
-
-const Cards: React.FunctionComponent<CardsProps> = ({movie}) => {
-  const sxStyle = {
-    margin: 2, minWidth: 380, minHeight: 280, display: "flex", flexDirection: "column", alignItems: "center",
-    justifyContent: "center",background:"#333333", '&:hover': { transform: "scale(1.05)" }, transition: "transform 0.2s ease"
-  }
+const Cards: React.FunctionComponent<CardsProps> = ({movie, minWidthCustom}) => {
+ 
   return (
-    <Card variant="elevation" sx={sxStyle}>
+    <Card variant="elevation" className={style.card} style={{width:`${minWidthCustom}`}} sx={{background:"#333333", mt:2}}>
       <CardContent sx={{ mt: 0 }}>
-        <Typography sx={{fontSize:"14px", mb:3, color:"white"}}>
+        <Typography sx={{fontSize:"14px", mb:3, color:"white", pl:4}}>
           {movie.title}
         </Typography>
         <Link to={`/${movie.id}`}>
           <Avatar variant='rounded' sx={{
-            minWidth: 370, minHeight: 200, mt: -2, mb: -3, mr:-6, ml:-6 }} alt="img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
+            minWidth: 370, minHeight: 200 }} alt="img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}/>
         </Link>
       </CardContent>
       <CardActions>
-      <Chip sx={{ml:-3, mt:1, background: "#cccccc"}} icon={<StarIcon />} label={movie.vote_average} variant="outlined" />
-      <Typography sx={{fontSize:"11px", color:"#cccccc", mt:1, ml:25}}>{`id  #${movie.id}`}</Typography>
+      <Chip sx={{ml:-3, mt:0, background: "#cccccc", mb:1}} icon={<StarIcon />} label={movie.vote_average} variant="outlined" />
+      <Typography sx={{fontSize:"11px", color:"#cccccc", mt:1, ml:20, mb:2}}>{`id  #${movie.id}`}</Typography>
       </CardActions>
       
     </Card>
