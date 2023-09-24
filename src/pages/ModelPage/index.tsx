@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import Navbar from "components/Navbar";
 import { Outlet } from "react-router-dom";
 import styles from './ModelPage.module.scss'
+import Footer from "components/Footer";
 
 
 export default function ModelPage() {
@@ -11,7 +12,7 @@ export default function ModelPage() {
          <Navbar />
          
             <Outlet />
-         
+         <Footer />
       </Box>
      
    );

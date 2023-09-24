@@ -1,7 +1,7 @@
 import { Avatar, Card, CardActions, CardContent, Chip, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import StarIcon from '@mui/icons-material/Star';;
+import StarIcon from '@mui/icons-material/Star';
 
 
 export interface CardsProps { key: number; movie:{

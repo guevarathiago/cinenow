@@ -29,7 +29,6 @@ const Home: React.FunctionComponent<HomePageProps> = props => {
       api_key: "b8ce1f853c4e9d174dc603ee044fa938"
         }
     })
-    console.log(results)
     setMovies(results)
   } 
 
@@ -37,14 +36,6 @@ const Home: React.FunctionComponent<HomePageProps> = props => {
     
     fetchMovies(search)
   },[search])
-  
-  const searchMovies = () => {
-    type = `search/movie?query=${search} `
-    fetchMovies(search)
-    console.log(type)
-    
-
-  }
   
   return (
         <>
