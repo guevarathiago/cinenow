@@ -4,7 +4,7 @@ import { FC } from 'react';
 
 // App
 import { MoviesPaginated } from 'components/MoviesPaginated';
-import { Search } from 'components/Search';
+import { Search } from 'components/search';
 import { Cards } from 'components/Cards';
 import { Highlights } from 'components/Highlights';
 import { Movie } from 'types';
