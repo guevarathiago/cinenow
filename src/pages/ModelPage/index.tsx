@@ -1,20 +1,21 @@
+// 3rd parties
 import { Box } from "@mui/material";
-import Navbar from "components/Navbar";
+import { FC } from 'react';
 import { Outlet } from "react-router-dom";
+
+// App
+import { Footer } from "components/Footer";
+import { Navbar } from "components/Navbar";
+
+// Local
 import styles from './ModelPage.module.scss'
-import Footer from "components/Footer";
 
+export const ModelPage: FC = () => (
+  <Box className={styles.box} minHeight={1080} >
+    <Navbar />
 
-export default function ModelPage() {
-   return (
-       
-     <Box className={styles.box} minHeight={1080} >
-         <Navbar />
-         
-            <Outlet />
-         <Footer />
-      </Box>
-     
-   );
- }
- 
+    <Outlet />
+
+    <Footer />
+  </Box>
+);

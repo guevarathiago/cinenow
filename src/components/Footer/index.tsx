@@ -1,17 +1,21 @@
-import {
-  AppBar,
-  Toolbar,
-} from "@mui/material";
+// 3rd parties
+import { AppBar, Toolbar } from "@mui/material";
+import { FC } from 'react';
 
-
-export default function Footer() {
-  return (
-    <AppBar
-      position="sticky"
-      sx={{ mt: "-8px", height: "80px", width: "100%" }}
+export const Footer: FC = () => (
+  <AppBar
+    position="sticky"
+    sx={{ mt: "-8px", height: "80px", width: "100%" }}
+  >
+    <Toolbar
+      sx={{
+        marginY: "auto",
+        background:"black",
+        height: "100%",
+        justifyContent:"center"
+      }}
     >
-      <Toolbar sx={{ marginY: "auto", background:"black", height: "100%", justifyContent:"center"}}>Desenvolvido por Thiago B Guevara
-      </Toolbar>
-    </AppBar>
-  );
-}
+      Developed by Thiago B Guevara
+    </Toolbar>
+  </AppBar>
+);
